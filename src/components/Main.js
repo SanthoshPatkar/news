@@ -7,6 +7,7 @@ function Main(){
     fetch(url)
     .then((response)=>response.json())
     .then((news)=>{
+        console.log(news)
       setArticle(news.articles);
      })
     },[])
@@ -14,16 +15,16 @@ function Main(){
        <div className="container">
            <div className="header">
                {
-                   articles.map((article,index)=>{
+                   articles.map((article,index)=>(
                         <div className="article">
                             <div className="news-image">
-              
+                                <img src={article.urlToImage} alt=" " className="img"/>
                             </div>
                             <div className="news-details">
                             </div>
 
                         </div>
-                   })
+                   ))
                }
            </div>
        </div>
