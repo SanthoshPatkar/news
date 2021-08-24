@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -37,40 +37,135 @@
   }
 }
 
-
+body {
+  background-color: gray;
+}
 /* main css */
 
 .container{
- padding-top: 30px;
- margin-bottom: 30px;
- background-color: chartreuse;
- width: 86%;
- margin-left: 7%;
+ padding-top: 10px;
+ margin-bottom:10px;
+ width: 92%;
+ margin-left: 4%;
 }
 .header {
   padding: 20px;
-  background-color: brown;
+  background-color: gray;
 }
 .article{
+  margin: 1.5%;
   padding: 2%;
   width:100%;
   box-sizing: border-box;
-  background-color: cyan;
+ background-color: white;
   display: flex;
   justify-content: space-between;
+  border-radius: 5px;
 }
 .news-image {
-  height: 200px;
-  width: 26%;
+  height: 240px;
+  width: 32%;
 }
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border:1px solid rgb(117, 112, 112);
+  border-radius: 5px;
 }
 .news-details {
   margin: 0%;
-  height: 200px;
-  width:71%;
-  background-color:yellow;
+  height: 240px;
+  width:64%;
+  box-shadow: 0 0 1px gray;
+  padding: 1%;
+}
+.title {
+  margin: 0;
+}
+.author {
+  margin: 0 0 1% 0;;
+}
+.description{
+  text-align: justify;
+}
+.btn {
+  padding: 8px;
+  background-color:cornflowerblue;
+  font-weight: bold;
+  font-family: 'Segoe UI';
+  border: none;
+  cursor: pointer;
+}
+.search {
+ width: 100%;
+ display: flex;
+ justify-content: space-evenly;
+ margin-left: 0px;
+ margin-top: 0;
+}
+.search-field {
+   width: 83%;
+   height: 40px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   display: inline-block;
+   font-size: 20px;
+   text-indent: 10px;
+   border-radius: 5px;
+   outline: none;
+   border: 1px solid gray;
+}
+.header>h1 {
+  margin-left: 1.5%;
+  box-sizing: border-box;
+}
+.search>button {
+  width: 12%;
+  margin-top: 10px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  font-size: 17px;
+}
+.container>h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0;
+}
+.copy {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.nodata {
+  text-align: center;
+  font-size: 40px;
+}
+/* media queries */
+@media screen and (max-width: 1000px and min-width:700px) {
+
+  .news-image {
+    height:350px;
+    object-fit:contain;
+  }
+  .news-details {
+    width: 100%;
+    height: 350px;
+  }
+
+}
+@media screen and (max-width: 700px){
+  .article
+  {
+    display: block;
+  }
+  .news-image {
+    width: 100%;
+  }
+  .news-details {
+  width: 100%;
+  padding: 1%;
+  height: 400px;
+  }
 }
