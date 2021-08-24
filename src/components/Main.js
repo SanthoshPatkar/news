@@ -30,11 +30,11 @@ function Main() {
             <div className="header">
                 <div className="search">
                     <input type="text" placeholder="Enter news topic" onChange={(event) => { readNews(event.target.value) }} className="search-field" />
-                    <button className="btn" onClick={getnews}> Seach for News</button>
+                    <button className="btn" onClick={getnews}> Search for News</button>
                 </div>
                 <h1>All Related News of Searched Topic</h1>
                 {
-                    articles?.length === 0 ? (<h2 className="nodata"> NO Data Found</h2>) :
+                    articles?.length === 0 ? (<h2 className="nodata"> No Data Found</h2>) :
                         articles.map((article, index) => (
 
                             <div className="article">
